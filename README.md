@@ -4,10 +4,19 @@ Video Demonstration Link: https://www.loom.com/share/8d5cbc9d342648b9b790a8c2944
 
 Automates Login, Product Search, Cart Operations, and End-to-End Checkout on the TutorialsNinja demo store (https://tutorialsninja.com/demo/).
 
+## Project Documentation & Reports
+
+- 📜 [All Certificates](All%20Certificates/)
+- 📑 [Capstone project Report](Capstone%20project%20Report/)
+- 📂 [Selnium Assignments Reports (1,2,3,4 Modules)](Selnium%20Assignments%20Reports%20(1,2,3,4%20Modules)/)
+
 ## Project structure
 
 ```
 selenium_capstone/
+├── All Certificates/                              # Course & automation certifications (PDF)
+├── Capstone project Report/                       # Capstone project report documentation (.docx)
+├── Selnium Assignments Reports (1,2,3,4 Modules)/ # Module 1-4 assignment submission reports (.docx)
 ├── config/
 │   ├── config.ini              # URL, browser, waits, credentials, folder paths
 │   └── config_reader.py        # reads config.ini with environment overrides
