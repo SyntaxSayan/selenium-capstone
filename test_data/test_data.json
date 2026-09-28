@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "name": "E-Commerce Selenium Automation Capstone",
+    "target_application": "TutorialsNinja OpenCart Demo",
+    "base_url": "https://tutorialsninja.com/demo/"
+  },
+  "credentials": {
+    "valid_email": "tester_capstone_selenium@gmail.com",
+    "valid_password": "Password@123",
+    "firstname": "Capstone",
+    "lastname": "Tester",
+    "telephone": "9876543210"
+  },
+  "test_cases": [
+    {
+      "test_id": "TC01",
+      "description": "Purchase MacBook with quantity update to 2",
+      "search_term": "MacBook",
+      "product_name": "MacBook",
+      "initial_qty": 1,
+      "updated_qty": 2,
+      "unit_price": 602.00,
+      "expected_total": 1204.00
+    },
+    {
+      "test_id": "TC02",
+      "description": "Purchase iPhone with quantity update to 3",
+      "search_term": "iPhone",
+      "product_name": "iPhone",
+      "initial_qty": 1,
+      "updated_qty": 3,
+      "unit_price": 123.20,
+      "expected_total": 369.60
+    },
+    {
+      "test_id": "TC03",
+      "description": "Purchase Samsung Galaxy Tab with quantity update to 2",
+      "search_term": "Samsung Galaxy",
+      "product_name": "Samsung Galaxy Tab 10.1",
+      "initial_qty": 1,
+      "updated_qty": 2,
+      "unit_price": 241.99,
+      "expected_total": 483.98
+    }
+  ]
+}

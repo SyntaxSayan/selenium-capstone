@@ -1,0 +1,464 @@
+2026-09-27 11:38:34 [INFO] [excel_util.py:54] Loaded 3 rows from Excel sheet 'PurchaseScenarios' in test_data/test_data.xlsx
+2026-09-27 11:38:41 [INFO] [json_util.py:16] Loaded JSON data from test_data/test_data.json
+2026-09-27 11:40:54 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:40:55 [INFO] [test_e2e_purchase.py:26] ========== Starting E2E Purchase Flow Test ==========
+2026-09-27 11:40:55 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:40:58 [INFO] [base_page.py:123] Screenshot captured for '01_home_page_launched' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\01_home_page_launched_20260927_114058_246.png
+2026-09-27 11:40:58 [INFO] [base_page.py:33] Page title: 'Your Store'
+2026-09-27 11:40:58 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-27 11:40:58 [INFO] [login_page.py:41] Attempting login with email: tester_capstone_selenium@gmail.com
+2026-09-27 11:40:58 [INFO] [base_page.py:92] Entered text 'tester_capstone_selenium@gmail.com' into element: ('id', 'input-email')
+2026-09-27 11:40:58 [INFO] [base_page.py:92] Entered text 'Password@123' into element: ('id', 'input-password')
+2026-09-27 11:40:58 [INFO] [base_page.py:79] Clicked element: ('xpath', "//input[@value='Login']")
+2026-09-27 11:41:08 [WARNING] [login_page.py:76] Login failed for tester_capstone_selenium@gmail.com. Auto-registering account.
+2026-09-27 11:41:08 [INFO] [login_page.py:59] Registering user account for: tester_capstone_selenium@gmail.com
+2026-09-27 11:41:08 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=account/register
+2026-09-27 11:41:11 [INFO] [base_page.py:92] Entered text 'Capstone' into element: ('id', 'input-firstname')
+2026-09-27 11:41:11 [INFO] [base_page.py:92] Entered text 'Tester' into element: ('id', 'input-lastname')
+2026-09-27 11:41:12 [INFO] [base_page.py:92] Entered text 'tester_capstone_selenium@gmail.com' into element: ('id', 'input-email')
+2026-09-27 11:41:12 [INFO] [base_page.py:92] Entered text '9876543210' into element: ('id', 'input-telephone')
+2026-09-27 11:41:12 [INFO] [base_page.py:92] Entered text 'Password@123' into element: ('id', 'input-password')
+2026-09-27 11:41:12 [INFO] [base_page.py:92] Entered text 'Password@123' into element: ('id', 'input-confirm')
+2026-09-27 11:41:12 [INFO] [base_page.py:79] Clicked element: ('name', 'agree')
+2026-09-27 11:41:14 [INFO] [base_page.py:79] Clicked element: ('xpath', "//input[@value='Continue']")
+2026-09-27 11:41:24 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-27 11:41:24 [INFO] [login_page.py:41] Attempting login with email: tester_capstone_selenium@gmail.com
+2026-09-27 11:41:45 [INFO] [conftest.py:116] Attached failure screenshot to report: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\FAIL_test_complete_ecommerce_purchase_flow_20260927_114145_265.png
+2026-09-27 11:41:45 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:42:13 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:42:14 [INFO] [test_e2e_purchase.py:26] ========== Starting E2E Purchase Flow Test ==========
+2026-09-27 11:42:14 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:42:16 [INFO] [base_page.py:123] Screenshot captured for '01_home_page_launched' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\01_home_page_launched_20260927_114215_893.png
+2026-09-27 11:42:16 [INFO] [base_page.py:33] Page title: 'Your Store'
+2026-09-27 11:42:16 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-27 11:42:36 [INFO] [login_page.py:43] Attempting login with email: tester_capstone_selenium@gmail.com
+2026-09-27 11:42:36 [INFO] [base_page.py:92] Entered text 'tester_capstone_selenium@gmail.com' into element: ('id', 'input-email')
+2026-09-27 11:42:36 [INFO] [base_page.py:92] Entered text 'Password@123' into element: ('id', 'input-password')
+2026-09-27 11:42:36 [INFO] [base_page.py:79] Clicked element: ('xpath', "//input[@value='Login']")
+2026-09-27 11:42:38 [INFO] [login_page.py:91] User tester_capstone_selenium@gmail.com authenticated successfully.
+2026-09-27 11:42:38 [INFO] [base_page.py:123] Screenshot captured for '02_user_logged_in' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\02_user_logged_in_20260927_114238_112.png
+2026-09-27 11:42:38 [INFO] [test_e2e_purchase.py:51] Step 2 passed: User authenticated successfully.
+2026-09-27 11:42:38 [INFO] [home_page.py:30] Searching for product: 'MacBook'
+2026-09-27 11:42:38 [INFO] [base_page.py:92] Entered text 'MacBook' into element: ('name', 'search')
+2026-09-27 11:42:38 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:42:38 [INFO] [base_page.py:123] Screenshot captured for '03_search_results' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\03_search_results_20260927_114238_809.png
+2026-09-27 11:42:38 [INFO] [search_results_page.py:38] Checking if 'MacBook' is in results: True
+2026-09-27 11:42:38 [INFO] [test_e2e_purchase.py:59] Step 3 passed: Product 'MacBook' found in search results.
+2026-09-27 11:42:38 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:42:39 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:42:39 [INFO] [base_page.py:123] Screenshot captured for '04_product_added_to_cart' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\04_product_added_to_cart_20260927_114239_200.png
+2026-09-27 11:42:39 [INFO] [test_e2e_purchase.py:65] Step 4 passed: Product added with alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:42:39 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:42:39 [INFO] [base_page.py:123] Screenshot captured for '05_cart_initial_view' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\05_cart_initial_view_20260927_114239_541.png
+2026-09-27 11:42:39 [INFO] [test_e2e_purchase.py:73] Initial quantity in cart: 1
+2026-09-27 11:42:39 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'MacBook'
+2026-09-27 11:42:40 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:42:40 [INFO] [base_page.py:123] Screenshot captured for '06_quantity_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\06_quantity_updated_20260927_114240_254.png
+2026-09-27 11:42:40 [INFO] [test_e2e_purchase.py:81] Step 6 passed: Quantity updated with success alert.
+2026-09-27 11:42:40 [INFO] [test_e2e_purchase.py:88] Verification -> Quantity: 2, Unit Price: $602.0, Line Total: $1204.0
+2026-09-27 11:42:40 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:42:40 [INFO] [cart_page.py:138] Dismissed alert banner.
+2026-09-27 11:42:40 [INFO] [base_page.py:123] Screenshot captured for '07_cart_verified_alert_dismissed' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\07_cart_verified_alert_dismissed_20260927_114240_519.png
+2026-09-27 11:42:40 [INFO] [test_e2e_purchase.py:97] Step 8 passed: Alert banner dismissed successfully.
+2026-09-27 11:42:40 [INFO] [test_e2e_purchase.py:101] Final Cart Total: $1000.0
+2026-09-27 11:42:40 [INFO] [conftest.py:116] Attached failure screenshot to report: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\FAIL_test_complete_ecommerce_purchase_flow_20260927_114240_725.png
+2026-09-27 11:42:40 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:43:39 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:43:39 [INFO] [test_e2e_purchase.py:26] ========== Starting E2E Purchase Flow Test ==========
+2026-09-27 11:43:39 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:43:41 [INFO] [base_page.py:123] Screenshot captured for '01_home_page_launched' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\01_home_page_launched_20260927_114341_097.png
+2026-09-27 11:43:41 [INFO] [base_page.py:33] Page title: 'Your Store'
+2026-09-27 11:43:41 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-27 11:44:01 [INFO] [login_page.py:43] Attempting login with email: tester_capstone_selenium@gmail.com
+2026-09-27 11:44:01 [INFO] [base_page.py:92] Entered text 'tester_capstone_selenium@gmail.com' into element: ('id', 'input-email')
+2026-09-27 11:44:01 [INFO] [base_page.py:92] Entered text 'Password@123' into element: ('id', 'input-password')
+2026-09-27 11:44:01 [INFO] [base_page.py:79] Clicked element: ('xpath', "//input[@value='Login']")
+2026-09-27 11:44:03 [INFO] [login_page.py:91] User tester_capstone_selenium@gmail.com authenticated successfully.
+2026-09-27 11:44:03 [INFO] [base_page.py:123] Screenshot captured for '02_user_logged_in' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\02_user_logged_in_20260927_114403_146.png
+2026-09-27 11:44:03 [INFO] [test_e2e_purchase.py:51] Step 2 passed: User authenticated successfully.
+2026-09-27 11:44:03 [INFO] [home_page.py:30] Searching for product: 'MacBook'
+2026-09-27 11:44:03 [INFO] [base_page.py:92] Entered text 'MacBook' into element: ('name', 'search')
+2026-09-27 11:44:03 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:44:03 [INFO] [base_page.py:123] Screenshot captured for '03_search_results' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\03_search_results_20260927_114403_828.png
+2026-09-27 11:44:04 [INFO] [search_results_page.py:38] Checking if 'MacBook' is in results: True
+2026-09-27 11:44:04 [INFO] [test_e2e_purchase.py:59] Step 3 passed: Product 'MacBook' found in search results.
+2026-09-27 11:44:04 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:44:04 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:44:04 [INFO] [base_page.py:123] Screenshot captured for '04_product_added_to_cart' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\04_product_added_to_cart_20260927_114404_317.png
+2026-09-27 11:44:04 [INFO] [test_e2e_purchase.py:65] Step 4 passed: Product added with alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:44:04 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:44:04 [INFO] [base_page.py:123] Screenshot captured for '05_cart_initial_view' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\05_cart_initial_view_20260927_114404_689.png
+2026-09-27 11:44:04 [INFO] [test_e2e_purchase.py:73] Initial quantity in cart: 3
+2026-09-27 11:44:04 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'MacBook'
+2026-09-27 11:44:05 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:44:05 [INFO] [base_page.py:123] Screenshot captured for '06_quantity_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\06_quantity_updated_20260927_114405_395.png
+2026-09-27 11:44:05 [INFO] [test_e2e_purchase.py:81] Step 6 passed: Quantity updated with success alert.
+2026-09-27 11:44:05 [INFO] [test_e2e_purchase.py:88] Verification -> Quantity: 2, Unit Price: $602.0, Line Total: $1204.0
+2026-09-27 11:44:05 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:44:05 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:44:05 [INFO] [base_page.py:123] Screenshot captured for '07_cart_verified_alert_dismissed' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\07_cart_verified_alert_dismissed_20260927_114405_668.png
+2026-09-27 11:44:05 [INFO] [test_e2e_purchase.py:97] Step 8 passed: Alert banner dismissed successfully.
+2026-09-27 11:44:05 [INFO] [test_e2e_purchase.py:101] Final Cart Total: $1204.0
+2026-09-27 11:44:05 [INFO] [test_e2e_purchase.py:104] ========== E2E Purchase Flow Test COMPLETED SUCCESSFULLY ==========
+2026-09-27 11:44:05 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:44:17 [INFO] [excel_util.py:54] Loaded 3 rows from Excel sheet 'PurchaseScenarios' in C:\Users\shubh\OneDrive\Desktop\AUTOMATION\test_data/test_data.xlsx
+2026-09-27 11:44:17 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:44:18 [INFO] [test_data_driven_excel.py:36] ----- Running Excel Driven Test [TC_E2E_01]: MacBook Purchase Flow -----
+2026-09-27 11:44:18 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:44:19 [INFO] [home_page.py:30] Searching for product: 'MacBook'
+2026-09-27 11:44:19 [INFO] [base_page.py:92] Entered text 'MacBook' into element: ('name', 'search')
+2026-09-27 11:44:19 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:44:20 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:44:20 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:44:20 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_01_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_01_product_added_20260927_114420_277.png
+2026-09-27 11:44:20 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:44:20 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'MacBook'
+2026-09-27 11:44:21 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:44:21 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_01_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_01_qty_updated_20260927_114421_128.png
+2026-09-27 11:44:21 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:44:21 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:44:21 [INFO] [test_data_driven_excel.py:73] [TC_E2E_01] Completed successfully with verified total: $1204.0
+2026-09-27 11:44:21 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:44:23 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:44:24 [INFO] [test_data_driven_excel.py:36] ----- Running Excel Driven Test [TC_E2E_02]: iPhone Purchase Flow -----
+2026-09-27 11:44:24 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:44:25 [INFO] [home_page.py:30] Searching for product: 'iPhone'
+2026-09-27 11:44:25 [INFO] [base_page.py:92] Entered text 'iPhone' into element: ('name', 'search')
+2026-09-27 11:44:26 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:44:26 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:44:26 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added iPhone to your shopping cart!
+×'
+2026-09-27 11:44:26 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_02_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_02_product_added_20260927_114426_323.png
+2026-09-27 11:44:26 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:44:26 [INFO] [cart_page.py:76] Updating quantity to: 3 for product: 'iPhone'
+2026-09-27 11:44:27 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:44:27 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_02_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_02_qty_updated_20260927_114427_208.png
+2026-09-27 11:44:27 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:44:27 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:44:27 [INFO] [test_data_driven_excel.py:73] [TC_E2E_02] Completed successfully with verified total: $369.6
+2026-09-27 11:44:27 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:44:29 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:44:30 [INFO] [test_data_driven_excel.py:36] ----- Running Excel Driven Test [TC_E2E_03]: Samsung Tab Purchase Flow -----
+2026-09-27 11:44:30 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:44:31 [INFO] [home_page.py:30] Searching for product: 'Samsung Galaxy'
+2026-09-27 11:44:31 [INFO] [base_page.py:92] Entered text 'Samsung Galaxy' into element: ('name', 'search')
+2026-09-27 11:44:32 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:44:32 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:44:32 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added Samsung Galaxy Tab 10.1 to your shopping cart!
+×'
+2026-09-27 11:44:32 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_03_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_03_product_added_20260927_114432_271.png
+2026-09-27 11:44:32 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:44:32 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'Samsung Galaxy Tab 10.1'
+2026-09-27 11:44:33 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:44:33 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_03_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_03_qty_updated_20260927_114433_124.png
+2026-09-27 11:44:33 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:44:33 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:44:33 [INFO] [test_data_driven_excel.py:73] [TC_E2E_03] Completed successfully with verified total: $483.98
+2026-09-27 11:44:33 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:44:43 [INFO] [json_util.py:16] Loaded JSON data from C:\Users\shubh\OneDrive\Desktop\AUTOMATION\test_data/test_data.json
+2026-09-27 11:44:43 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:44:44 [INFO] [test_data_driven_json.py:35] ----- Running JSON Driven Test [TC01]: Purchase MacBook with quantity update to 2 -----
+2026-09-27 11:44:44 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:44:46 [INFO] [home_page.py:30] Searching for product: 'MacBook'
+2026-09-27 11:44:46 [INFO] [base_page.py:92] Entered text 'MacBook' into element: ('name', 'search')
+2026-09-27 11:44:46 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:44:46 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:44:47 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:44:47 [INFO] [base_page.py:123] Screenshot captured for 'json_TC01_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC01_product_added_20260927_114447_054.png
+2026-09-27 11:44:47 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:44:47 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'MacBook'
+2026-09-27 11:44:47 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:44:47 [INFO] [base_page.py:123] Screenshot captured for 'json_TC01_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC01_qty_updated_20260927_114447_874.png
+2026-09-27 11:44:48 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:44:48 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:44:48 [INFO] [test_data_driven_json.py:71] [TC01] JSON-driven test passed successfully.
+2026-09-27 11:44:48 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:44:50 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:44:50 [INFO] [test_data_driven_json.py:35] ----- Running JSON Driven Test [TC02]: Purchase iPhone with quantity update to 3 -----
+2026-09-27 11:44:50 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:44:52 [INFO] [home_page.py:30] Searching for product: 'iPhone'
+2026-09-27 11:44:52 [INFO] [base_page.py:92] Entered text 'iPhone' into element: ('name', 'search')
+2026-09-27 11:44:52 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:44:52 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:44:52 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added iPhone to your shopping cart!
+×'
+2026-09-27 11:44:52 [INFO] [base_page.py:123] Screenshot captured for 'json_TC02_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC02_product_added_20260927_114452_874.png
+2026-09-27 11:44:52 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:44:53 [INFO] [cart_page.py:76] Updating quantity to: 3 for product: 'iPhone'
+2026-09-27 11:44:53 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:44:53 [INFO] [base_page.py:123] Screenshot captured for 'json_TC02_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC02_qty_updated_20260927_114453_794.png
+2026-09-27 11:44:54 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:44:54 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:44:54 [INFO] [test_data_driven_json.py:71] [TC02] JSON-driven test passed successfully.
+2026-09-27 11:44:54 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:44:56 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:44:56 [INFO] [test_data_driven_json.py:35] ----- Running JSON Driven Test [TC03]: Purchase Samsung Galaxy Tab with quantity update to 2 -----
+2026-09-27 11:44:56 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:44:58 [INFO] [home_page.py:30] Searching for product: 'Samsung Galaxy'
+2026-09-27 11:44:58 [INFO] [base_page.py:92] Entered text 'Samsung Galaxy' into element: ('name', 'search')
+2026-09-27 11:44:58 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:44:58 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:44:58 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added Samsung Galaxy Tab 10.1 to your shopping cart!
+×'
+2026-09-27 11:44:58 [INFO] [base_page.py:123] Screenshot captured for 'json_TC03_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC03_product_added_20260927_114458_717.png
+2026-09-27 11:44:58 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:44:59 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'Samsung Galaxy Tab 10.1'
+2026-09-27 11:44:59 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:44:59 [INFO] [base_page.py:123] Screenshot captured for 'json_TC03_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC03_qty_updated_20260927_114459_553.png
+2026-09-27 11:44:59 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:44:59 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:44:59 [INFO] [test_data_driven_json.py:71] [TC03] JSON-driven test passed successfully.
+2026-09-27 11:44:59 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:45:14 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:45:14 [INFO] [test_cart_operations.py:17] Running invalid login test...
+2026-09-27 11:45:14 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-27 11:45:16 [INFO] [login_page.py:43] Attempting login with email: invalid_user_xyz@test.com
+2026-09-27 11:45:16 [INFO] [base_page.py:92] Entered text 'invalid_user_xyz@test.com' into element: ('id', 'input-email')
+2026-09-27 11:45:16 [INFO] [base_page.py:92] Entered text 'WrongPassword999' into element: ('id', 'input-password')
+2026-09-27 11:45:16 [INFO] [base_page.py:79] Clicked element: ('xpath', "//input[@value='Login']")
+2026-09-27 11:45:20 [INFO] [base_page.py:123] Screenshot captured for 'invalid_login_attempt' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\invalid_login_attempt_20260927_114516_354.png
+2026-09-27 11:45:20 [INFO] [base_page.py:98] Read text 'Warning: No match for E-Mail Address and/or Password.' from element: ('css selector', '.alert-danger')
+2026-09-27 11:45:20 [INFO] [test_cart_operations.py:27] Invalid login warning alert verified successfully.
+2026-09-27 11:45:20 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:45:22 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:45:22 [INFO] [test_cart_operations.py:31] Running quantity update and alert dismissal test...
+2026-09-27 11:45:22 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:45:24 [INFO] [home_page.py:30] Searching for product: 'iPhone'
+2026-09-27 11:45:24 [INFO] [base_page.py:92] Entered text 'iPhone' into element: ('name', 'search')
+2026-09-27 11:45:24 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:45:24 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:45:24 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added iPhone to your shopping cart!
+×'
+2026-09-27 11:45:24 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:45:25 [INFO] [cart_page.py:76] Updating quantity to: 4 for product: 'iPhone'
+2026-09-27 11:45:25 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:45:26 [INFO] [alert_handler.py:69] Dismissed bootstrap banner alert.
+2026-09-27 11:45:26 [INFO] [base_page.py:123] Screenshot captured for 'alert_dismissed_check' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\alert_dismissed_check_20260927_114526_015.png
+2026-09-27 11:45:26 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:45:28 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:45:28 [INFO] [test_cart_operations.py:59] Running cart removal test...
+2026-09-27 11:45:28 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:45:30 [INFO] [home_page.py:30] Searching for product: 'MacBook'
+2026-09-27 11:45:30 [INFO] [base_page.py:92] Entered text 'MacBook' into element: ('name', 'search')
+2026-09-27 11:45:30 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:45:30 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:45:31 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:45:31 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:45:31 [INFO] [cart_page.py:153] Cart cleared.
+2026-09-27 11:45:31 [INFO] [base_page.py:123] Screenshot captured for 'cart_cleared_state' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\cart_cleared_state_20260927_114531_796.png
+2026-09-27 11:45:31 [INFO] [test_cart_operations.py:73] Cart cleared and empty message verified.
+2026-09-27 11:45:31 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:45:42 [INFO] [excel_util.py:54] Loaded 3 rows from Excel sheet 'PurchaseScenarios' in C:\Users\shubh\OneDrive\Desktop\AUTOMATION\test_data/test_data.xlsx
+2026-09-27 11:45:42 [INFO] [json_util.py:16] Loaded JSON data from C:\Users\shubh\OneDrive\Desktop\AUTOMATION\test_data/test_data.json
+2026-09-27 11:45:42 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:45:43 [INFO] [test_cart_operations.py:17] Running invalid login test...
+2026-09-27 11:45:43 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-27 11:45:44 [INFO] [login_page.py:43] Attempting login with email: invalid_user_xyz@test.com
+2026-09-27 11:45:44 [INFO] [base_page.py:92] Entered text 'invalid_user_xyz@test.com' into element: ('id', 'input-email')
+2026-09-27 11:45:44 [INFO] [base_page.py:92] Entered text 'WrongPassword999' into element: ('id', 'input-password')
+2026-09-27 11:45:44 [INFO] [base_page.py:79] Clicked element: ('xpath', "//input[@value='Login']")
+2026-09-27 11:45:45 [INFO] [base_page.py:123] Screenshot captured for 'invalid_login_attempt' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\invalid_login_attempt_20260927_114544_637.png
+2026-09-27 11:45:45 [INFO] [base_page.py:98] Read text 'Warning: No match for E-Mail Address and/or Password.' from element: ('css selector', '.alert-danger')
+2026-09-27 11:45:45 [INFO] [test_cart_operations.py:27] Invalid login warning alert verified successfully.
+2026-09-27 11:45:45 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:45:47 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:45:48 [INFO] [test_cart_operations.py:31] Running quantity update and alert dismissal test...
+2026-09-27 11:45:48 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:45:49 [INFO] [home_page.py:30] Searching for product: 'iPhone'
+2026-09-27 11:45:50 [INFO] [base_page.py:92] Entered text 'iPhone' into element: ('name', 'search')
+2026-09-27 11:45:50 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:45:50 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:45:50 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added iPhone to your shopping cart!
+×'
+2026-09-27 11:45:50 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:45:50 [INFO] [cart_page.py:76] Updating quantity to: 4 for product: 'iPhone'
+2026-09-27 11:45:51 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:45:51 [INFO] [alert_handler.py:69] Dismissed bootstrap banner alert.
+2026-09-27 11:45:51 [INFO] [base_page.py:123] Screenshot captured for 'alert_dismissed_check' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\alert_dismissed_check_20260927_114551_432.png
+2026-09-27 11:45:51 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:45:53 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:45:54 [INFO] [test_cart_operations.py:59] Running cart removal test...
+2026-09-27 11:45:54 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:45:55 [INFO] [home_page.py:30] Searching for product: 'MacBook'
+2026-09-27 11:45:55 [INFO] [base_page.py:92] Entered text 'MacBook' into element: ('name', 'search')
+2026-09-27 11:45:55 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:45:55 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:45:56 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:45:56 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:45:57 [INFO] [cart_page.py:153] Cart cleared.
+2026-09-27 11:45:57 [INFO] [base_page.py:123] Screenshot captured for 'cart_cleared_state' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\cart_cleared_state_20260927_114557_280.png
+2026-09-27 11:45:57 [INFO] [test_cart_operations.py:73] Cart cleared and empty message verified.
+2026-09-27 11:45:57 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:45:59 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:46:00 [INFO] [test_data_driven_excel.py:36] ----- Running Excel Driven Test [TC_E2E_01]: MacBook Purchase Flow -----
+2026-09-27 11:46:00 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:46:01 [INFO] [home_page.py:30] Searching for product: 'MacBook'
+2026-09-27 11:46:01 [INFO] [base_page.py:92] Entered text 'MacBook' into element: ('name', 'search')
+2026-09-27 11:46:01 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:46:02 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:46:02 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:46:02 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_01_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_01_product_added_20260927_114602_317.png
+2026-09-27 11:46:02 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:46:02 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'MacBook'
+2026-09-27 11:46:03 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:46:03 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_01_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_01_qty_updated_20260927_114603_245.png
+2026-09-27 11:46:03 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:46:03 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:46:03 [INFO] [test_data_driven_excel.py:73] [TC_E2E_01] Completed successfully with verified total: $1204.0
+2026-09-27 11:46:03 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:46:05 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:46:06 [INFO] [test_data_driven_excel.py:36] ----- Running Excel Driven Test [TC_E2E_02]: iPhone Purchase Flow -----
+2026-09-27 11:46:06 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:46:07 [INFO] [home_page.py:30] Searching for product: 'iPhone'
+2026-09-27 11:46:07 [INFO] [base_page.py:92] Entered text 'iPhone' into element: ('name', 'search')
+2026-09-27 11:46:07 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:46:07 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:46:08 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added iPhone to your shopping cart!
+×'
+2026-09-27 11:46:08 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_02_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_02_product_added_20260927_114608_095.png
+2026-09-27 11:46:08 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:46:08 [INFO] [cart_page.py:76] Updating quantity to: 3 for product: 'iPhone'
+2026-09-27 11:46:08 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:46:09 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_02_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_02_qty_updated_20260927_114608_961.png
+2026-09-27 11:46:09 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:46:09 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:46:09 [INFO] [test_data_driven_excel.py:73] [TC_E2E_02] Completed successfully with verified total: $369.6
+2026-09-27 11:46:09 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:46:11 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:46:12 [INFO] [test_data_driven_excel.py:36] ----- Running Excel Driven Test [TC_E2E_03]: Samsung Tab Purchase Flow -----
+2026-09-27 11:46:12 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:46:13 [INFO] [home_page.py:30] Searching for product: 'Samsung Galaxy'
+2026-09-27 11:46:13 [INFO] [base_page.py:92] Entered text 'Samsung Galaxy' into element: ('name', 'search')
+2026-09-27 11:46:13 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:46:13 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:46:13 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added Samsung Galaxy Tab 10.1 to your shopping cart!
+×'
+2026-09-27 11:46:14 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_03_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_03_product_added_20260927_114613_937.png
+2026-09-27 11:46:14 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:46:14 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'Samsung Galaxy Tab 10.1'
+2026-09-27 11:46:14 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:46:14 [INFO] [base_page.py:123] Screenshot captured for 'excel_TC_E2E_03_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\excel_TC_E2E_03_qty_updated_20260927_114614_711.png
+2026-09-27 11:46:14 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:46:14 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:46:14 [INFO] [test_data_driven_excel.py:73] [TC_E2E_03] Completed successfully with verified total: $483.98
+2026-09-27 11:46:14 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:46:17 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:46:17 [INFO] [test_data_driven_json.py:35] ----- Running JSON Driven Test [TC01]: Purchase MacBook with quantity update to 2 -----
+2026-09-27 11:46:17 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:46:19 [INFO] [home_page.py:30] Searching for product: 'MacBook'
+2026-09-27 11:46:19 [INFO] [base_page.py:92] Entered text 'MacBook' into element: ('name', 'search')
+2026-09-27 11:46:19 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:46:19 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:46:19 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:46:20 [INFO] [base_page.py:123] Screenshot captured for 'json_TC01_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC01_product_added_20260927_114619_922.png
+2026-09-27 11:46:20 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:46:20 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'MacBook'
+2026-09-27 11:46:20 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:46:20 [INFO] [base_page.py:123] Screenshot captured for 'json_TC01_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC01_qty_updated_20260927_114620_784.png
+2026-09-27 11:46:21 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:46:21 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:46:21 [INFO] [test_data_driven_json.py:71] [TC01] JSON-driven test passed successfully.
+2026-09-27 11:46:21 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:46:23 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:46:23 [INFO] [test_data_driven_json.py:35] ----- Running JSON Driven Test [TC02]: Purchase iPhone with quantity update to 3 -----
+2026-09-27 11:46:23 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:46:24 [INFO] [home_page.py:30] Searching for product: 'iPhone'
+2026-09-27 11:46:25 [INFO] [base_page.py:92] Entered text 'iPhone' into element: ('name', 'search')
+2026-09-27 11:46:25 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:46:25 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:46:25 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added iPhone to your shopping cart!
+×'
+2026-09-27 11:46:25 [INFO] [base_page.py:123] Screenshot captured for 'json_TC02_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC02_product_added_20260927_114625_665.png
+2026-09-27 11:46:25 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:46:26 [INFO] [cart_page.py:76] Updating quantity to: 3 for product: 'iPhone'
+2026-09-27 11:46:26 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:46:26 [INFO] [base_page.py:123] Screenshot captured for 'json_TC02_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC02_qty_updated_20260927_114626_495.png
+2026-09-27 11:46:26 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:46:26 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:46:26 [INFO] [test_data_driven_json.py:71] [TC02] JSON-driven test passed successfully.
+2026-09-27 11:46:26 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:46:28 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:46:29 [INFO] [test_data_driven_json.py:35] ----- Running JSON Driven Test [TC03]: Purchase Samsung Galaxy Tab with quantity update to 2 -----
+2026-09-27 11:46:29 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:46:30 [INFO] [home_page.py:30] Searching for product: 'Samsung Galaxy'
+2026-09-27 11:46:30 [INFO] [base_page.py:92] Entered text 'Samsung Galaxy' into element: ('name', 'search')
+2026-09-27 11:46:30 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:46:30 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:46:31 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added Samsung Galaxy Tab 10.1 to your shopping cart!
+×'
+2026-09-27 11:46:31 [INFO] [base_page.py:123] Screenshot captured for 'json_TC03_product_added' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC03_product_added_20260927_114631_150.png
+2026-09-27 11:46:31 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:46:31 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'Samsung Galaxy Tab 10.1'
+2026-09-27 11:46:32 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:46:32 [INFO] [base_page.py:123] Screenshot captured for 'json_TC03_qty_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\json_TC03_qty_updated_20260927_114632_002.png
+2026-09-27 11:46:32 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:46:32 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:46:32 [INFO] [test_data_driven_json.py:71] [TC03] JSON-driven test passed successfully.
+2026-09-27 11:46:32 [INFO] [conftest.py:90] Tearing down WebDriver instance.
+2026-09-27 11:46:34 [INFO] [conftest.py:39] Setting up WebDriver: Browser='chrome', Headless=True
+2026-09-27 11:46:35 [INFO] [test_e2e_purchase.py:26] ========== Starting E2E Purchase Flow Test ==========
+2026-09-27 11:46:35 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/
+2026-09-27 11:46:36 [INFO] [base_page.py:123] Screenshot captured for '01_home_page_launched' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\01_home_page_launched_20260927_114636_368.png
+2026-09-27 11:46:36 [INFO] [base_page.py:33] Page title: 'Your Store'
+2026-09-27 11:46:36 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=account/login
+2026-09-27 11:46:56 [INFO] [login_page.py:43] Attempting login with email: tester_capstone_selenium@gmail.com
+2026-09-27 11:46:56 [INFO] [base_page.py:92] Entered text 'tester_capstone_selenium@gmail.com' into element: ('id', 'input-email')
+2026-09-27 11:46:56 [INFO] [base_page.py:92] Entered text 'Password@123' into element: ('id', 'input-password')
+2026-09-27 11:46:56 [INFO] [base_page.py:79] Clicked element: ('xpath', "//input[@value='Login']")
+2026-09-27 11:46:58 [INFO] [login_page.py:91] User tester_capstone_selenium@gmail.com authenticated successfully.
+2026-09-27 11:46:58 [INFO] [base_page.py:123] Screenshot captured for '02_user_logged_in' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\02_user_logged_in_20260927_114658_360.png
+2026-09-27 11:46:58 [INFO] [test_e2e_purchase.py:51] Step 2 passed: User authenticated successfully.
+2026-09-27 11:46:58 [INFO] [home_page.py:30] Searching for product: 'MacBook'
+2026-09-27 11:46:58 [INFO] [base_page.py:92] Entered text 'MacBook' into element: ('name', 'search')
+2026-09-27 11:46:59 [INFO] [base_page.py:79] Clicked element: ('css selector', '#search button')
+2026-09-27 11:46:59 [INFO] [base_page.py:123] Screenshot captured for '03_search_results' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\03_search_results_20260927_114659_367.png
+2026-09-27 11:46:59 [INFO] [search_results_page.py:38] Checking if 'MacBook' is in results: True
+2026-09-27 11:46:59 [INFO] [test_e2e_purchase.py:59] Step 3 passed: Product 'MacBook' found in search results.
+2026-09-27 11:46:59 [INFO] [search_results_page.py:65] Clicked 'Add to Cart' button.
+2026-09-27 11:46:59 [INFO] [search_results_page.py:70] Add to cart alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:46:59 [INFO] [base_page.py:123] Screenshot captured for '04_product_added_to_cart' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\04_product_added_to_cart_20260927_114659_769.png
+2026-09-27 11:46:59 [INFO] [test_e2e_purchase.py:65] Step 4 passed: Product added with alert: 'Success: You have added MacBook to your shopping cart!
+×'
+2026-09-27 11:46:59 [INFO] [base_page.py:27] Navigating to: https://tutorialsninja.com/demo/index.php?route=checkout/cart
+2026-09-27 11:47:00 [INFO] [base_page.py:123] Screenshot captured for '05_cart_initial_view' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\05_cart_initial_view_20260927_114700_137.png
+2026-09-27 11:47:00 [INFO] [test_e2e_purchase.py:73] Initial quantity in cart: 3
+2026-09-27 11:47:00 [INFO] [cart_page.py:76] Updating quantity to: 2 for product: 'MacBook'
+2026-09-27 11:47:00 [INFO] [cart_page.py:89] Quantity updated successfully. Alert: 'Success: You have modified your shopping cart!
+×'
+2026-09-27 11:47:00 [INFO] [base_page.py:123] Screenshot captured for '06_quantity_updated' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\06_quantity_updated_20260927_114700_795.png
+2026-09-27 11:47:00 [INFO] [test_e2e_purchase.py:81] Step 6 passed: Quantity updated with success alert.
+2026-09-27 11:47:00 [INFO] [test_e2e_purchase.py:88] Verification -> Quantity: 2, Unit Price: $602.0, Line Total: $1204.0
+2026-09-27 11:47:01 [INFO] [base_page.py:79] Clicked element: ('css selector', '.alert-success button.close')
+2026-09-27 11:47:01 [INFO] [cart_page.py:140] Dismissed alert banner.
+2026-09-27 11:47:01 [INFO] [base_page.py:123] Screenshot captured for '07_cart_verified_alert_dismissed' at: C:\Users\shubh\OneDrive\Desktop\AUTOMATION\screenshots\07_cart_verified_alert_dismissed_20260927_114701_069.png
+2026-09-27 11:47:01 [INFO] [test_e2e_purchase.py:97] Step 8 passed: Alert banner dismissed successfully.
+2026-09-27 11:47:01 [INFO] [test_e2e_purchase.py:101] Final Cart Total: $1204.0
+2026-09-27 11:47:01 [INFO] [test_e2e_purchase.py:104] ========== E2E Purchase Flow Test COMPLETED SUCCESSFULLY ==========
+2026-09-27 11:47:01 [INFO] [conftest.py:90] Tearing down WebDriver instance.
