@@ -7,7 +7,7 @@ Automates Login, Product Search, Cart Operations, and End-to-End Checkout on the
 ## Project structure
 
 ```
-AUTOMATION/
+selenium_capstone/
 ├── config/
 │   ├── config.ini              # URL, browser, waits, credentials, folder paths
 │   └── config_reader.py        # reads config.ini with environment overrides
