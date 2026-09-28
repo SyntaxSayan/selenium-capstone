@@ -1,269 +1,114 @@
-# Capstone Assignment 1: E-Commerce Automation Framework
-### Automated Web Testing Using Selenium WebDriver with Python & Pytest
+Video Demonstration Link: https://www.loom.com/share/8d5cbc9d342648b9b790a8c2944b7147
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
-![Selenium](https://img.shields.io/badge/Selenium-4.x-green?logo=selenium)
-![Pytest](https://img.shields.io/badge/Pytest-9.x-orange?logo=pytest)
-![Report](https://img.shields.io/badge/HTML%20Report-Self--Contained-brightgreen)
-![Design](https://img.shields.io/badge/Pattern-Page%20Object%20Model-purple)
+# Selenium Python Framework - PyTest + POM
 
----
+Automates Login, Product Search, Cart Operations, and End-to-End Checkout on the TutorialsNinja demo store (https://tutorialsninja.com/demo/).
 
-## 1. Project Overview & Business Scenario
-
-This enterprise-grade automation framework automates the end-to-end shopping workflow on the **TutorialsNinja E-Commerce Demo Application** (`https://tutorialsninja.com/demo/`). It is engineered to meet and exceed all requirements of **Capstone Assignment 1**, following industry standards including the **Page Object Model (POM)** pattern, **Data-Driven Testing (Excel & JSON)**, robust **Alert & Popup Handling**, **Step-by-step & Failure Screenshot Captures**, and rich **HTML Execution Reporting**.
-
-### Business Scenario
-> *A customer wants to purchase a product from an E-Commerce site.*
-
-### Requirements Traceability Matrix
-
-| # | Capstone Requirement | Framework Implementation | Verified Status |
-|---|----------------------|--------------------------|-----------------|
-| 1 | **Launch Browser** | Cross-browser driver factory supporting Chrome, Edge, and Firefox with Headless & Headed modes via `conftest.py` & `config.ini`. | ✅ PASSED |
-| 2 | **Login to Application** | `LoginPage` implementing robust login, session validation, and auto-registration fallback to ensure 100% test reliability. | ✅ PASSED |
-| 3 | **Search Product** | `HomePage` and `SearchResultsPage` with dynamic search bar locator, presence validation, and product card matching. | ✅ PASSED |
-| 4 | **Add Product to Cart** | Add-to-cart action with explicit waits (`WebDriverWait` + `EC`), JS click fallback, and notification alert verification. | ✅ PASSED |
-| 5 | **Update Quantity** | `CartPage` quantity input modification with update button submission and refresh verification. | ✅ PASSED |
-| 6 | **Verify Cart Details** | Mathematical assertions on unit price, updated quantity, calculated line total ($Price \times Qty$), subtotal, and final order total. | ✅ PASSED |
-| 7 | **Capture Screenshots** | `ScreenshotUtil` captures timestamped PNGs for every critical step into `screenshots/`, plus automatic failure screenshots attached directly to the HTML report. | ✅ PASSED |
-| 8 | **Read Test Data from Excel / JSON** | `ExcelUtil` (`openpyxl`) reads `test_data/test_data.xlsx`; `JsonUtil` reads `test_data/test_data.json` for parameterized test suites. | ✅ PASSED |
-| 9 | **Handle Popup / Alerts if Available** | `AlertHandler` handles native browser JavaScript dialogs (`alert`, `confirm`, `prompt`) and dismissible DOM modal / Bootstrap banner notifications. | ✅ PASSED |
-| 10| **Generate Execution Report** | `pytest-html` generates comprehensive, self-contained interactive report at `reports/report.html` with environment metadata, metrics, and screenshots. | ✅ PASSED |
-
----
-
-## 2. Framework Architecture & Design Pattern
-
-The framework utilizes a decoupled, layered **Page Object Model (POM)** architecture:
-
-```
-                                    +-----------------------+
-                                    |    pytest.ini / CLI   |
-                                    +-----------+-----------+
-                                                |
-                                    +-----------v-----------+
-                                    |   tests/conftest.py   |
-                                    |  (Driver, Fixtures,   |
-                                    |  Report Customization)|
-                                    +-----------+-----------+
-                                                |
-                      +-------------------------+-------------------------+
-                      |                                                   |
-           +----------v----------+                             +----------v----------+
-           |     Test Suites     |                             |     Page Objects    |
-           |---------------------|                             |---------------------|
-           | test_e2e_purchase   |                             | BasePage            |
-           | test_data_driven_xl | <--------- actions -------> | HomePage            |
-           | test_data_driven_js |                             | LoginPage           |
-           | test_cart_ops       |                             | SearchResultsPage   |
-           +----------+----------+                             | CartPage            |
-                      |                                        | ProductDetailPage   |
-                      |                                        +----------+----------+
-                      |                                                   |
-           +----------v----------+                             +----------v----------+
-           |      Utilities      |                             |      Test Data      |
-           |---------------------|                             |---------------------|
-           | CustomLogger        |                             | test_data.xlsx      |
-           | ScreenshotUtil      |                             | test_data.json      |
-           | AlertHandler        |                             | config.ini          |
-           | ExcelUtil (openpyxl)|                             +---------------------+
-           | JsonUtil            |
-           +---------------------+
-```
-
-### Key Architectural Strengths:
-1. **Explicit Waits (`WebDriverWait`)**: Eliminates flaky tests caused by network latency or DOM re-rendering.
-2. **Resilient Click Fallback**: If an element is overlapped or animated (`ElementClickInterceptedException`), the framework automatically falls back to JavaScript execution (`execute_script`).
-3. **Self-Contained Reporting**: The HTML execution report embeds CSS and resources into a single file suitable for emailing or CI/CD pipelines.
-
----
-
-## 3. Directory Structure
+## Project structure
 
 ```
 AUTOMATION/
-│
 ├── config/
-│   ├── __init__.py
-│   ├── config.ini                     # Base URLs, timeouts, browser defaults, test credentials
-│   └── config_reader.py               # Robust configuration parser
-│
-├── test_data/
-│   ├── test_data.json                 # JSON parameterized test scenarios
-│   ├── test_data.xlsx                 # Excel test dataset with formatted columns
-│   └── create_excel_data.py           # Script to generate/rebuild the Excel dataset
-│
-├── utilities/
-│   ├── __init__.py
-│   ├── custom_logger.py               # File and console logger (writes to logs/automation.log)
-│   ├── screenshot_util.py             # Timestamped screenshot generator
-│   ├── alert_handler.py               # JavaScript dialog & DOM alert/modal popup utility
-│   ├── excel_util.py                  # openpyxl reader returning lists of dictionaries
-│   └── json_util.py                   # JSON reader utility
-│
-├── pages/
-│   ├── __init__.py
-│   ├── base_page.py                   # Core POM foundation with waits, actions, and JS fallbacks
-│   ├── home_page.py                   # Search bar, header navigation, cart shortcuts
-│   ├── login_page.py                  # Authentication, warnings, registration self-healing
-│   ├── search_results_page.py         # Product cards, titles, add-to-cart triggers
-│   ├── product_detail_page.py         # Detailed product view & quantity selection
-│   └── cart_page.py                   # Quantity updater, item removal, price assertions
-│
+│   ├── config.ini              # URL, browser, waits, credentials, folder paths
+│   └── config_reader.py        # reads config.ini with environment overrides
+├── pages/                      # Page Object Model
+│   ├── base_page.py            #   waits, click, type, logging (parent class)
+│   ├── home_page.py            #   header search + navigation to login & cart
+│   ├── login_page.py           #   authentication & auto-registration fallback
+│   ├── search_results_page.py  #   search results & add to cart
+│   ├── product_detail_page.py  #   product details & quantity selection
+│   └── cart_page.py            #   quantity updater, item removal, price checks
+├── utilities/                  # Utility classes
+│   ├── custom_logger.py        #   console + logs/automation.log
+│   ├── screenshot_util.py      #   timestamped & failure screenshot helper
+│   ├── alert_handler.py        #   JavaScript dialog & DOM alert/modal popup utility
+│   ├── excel_util.py           #   openpyxl reader for Excel test data
+│   └── json_util.py            #   JSON reader for test datasets
+├── test_data/                  # External test data files
+│   ├── test_data.xlsx          #   Excel dataset (parameterized purchase scenarios)
+│   ├── test_data.json          #   JSON dataset
+│   └── create_excel_data.py    #   script to generate/rebuild Excel data
 ├── tests/
-│   ├── __init__.py
-│   ├── conftest.py                    # Cross-browser fixtures, failure hooks, report enrichment
-│   ├── test_e2e_purchase.py           # Complete End-to-End purchase flow
-│   ├── test_data_driven_excel.py      # Data-driven suite reading from Excel
-│   ├── test_data_driven_json.py       # Data-driven suite reading from JSON
-│   └── test_cart_operations.py        # Granular cart ops, quantity changes, alert handling
-│
-├── reports/
-│   └── report.html                    # Generated interactive execution report
-├── screenshots/                       # Step-by-step & failure PNG captures
-├── logs/
-│   └── automation.log                 # Detailed timestamped execution log
-│
-├── pytest.ini                         # Pytest configuration & report flags
-├── requirements.txt                   # Dependency list
-├── run_tests.bat                      # One-click Windows batch runner
-├── run_tests.ps1                      # Configurable PowerShell execution script
-└── README.md                          # Full project documentation
+│   ├── conftest.py             #   fixtures, CLI flags (--browser, --headless) + failure hook
+│   ├── test_e2e_purchase.py    #   complete End-to-End purchase flow
+│   ├── test_data_driven_excel.py # data-driven tests via Excel (openpyxl)
+│   ├── test_data_driven_json.py  # data-driven tests via JSON
+│   └── test_cart_operations.py #   cart operations, quantity updates, alert handling
+├── reports/                    # HTML reports (report.html)
+├── screenshots/                # Step-by-step & failure PNG captures
+├── logs/                       # Execution logs (automation.log)
+├── pytest.ini                  # Pytest configuration & CLI options
+├── requirements.txt            # Project dependencies
+├── run_tests.bat               # One-click Windows batch runner
+└── run_tests.ps1               # Configurable PowerShell execution runner
 ```
 
----
+## Setup
 
-## 4. Setup & Installation
-
-### Prerequisites
-- **Python 3.10+** (Tested on Python 3.13)
-- **Google Chrome** / **Microsoft Edge** / **Firefox**
-- **Git** (optional)
-
-### Step 1: Install Dependencies
-Open a command prompt in the project root directory and run:
 ```bash
-pip install -r requirements.txt
+python -m venv .venv
+source .venv/bin/activate    # Windows: .venv\Scripts\activate
+pip install -r requirements.txt  # Python 3.10+, Chrome/Firefox/Edge installed
 ```
 
----
+Selenium 4.6+ downloads the browser driver automatically (no webdriver-manager needed).
 
-## 5. Test Execution Guide
+Test credentials and environment configurations are centralized in `config/config.ini`. Update credentials or base URL if testing custom accounts:
 
-### Option A: One-Click Execution (Windows)
-Double-click `run_tests.bat` or run:
-```cmd
+```ini
+[common_info]
+base_url = https://tutorialsninja.com/demo/
+browser = chrome
+headless = false
+```
+
+## Running the tests
+
+```bash
+# PyTest (HTML report: reports/report.html)
+pytest
+pytest --headless
+pytest --browser firefox --headless
+pytest tests/test_e2e_purchase.py
+pytest tests/test_data_driven_excel.py
+pytest tests/test_data_driven_json.py
+pytest tests/test_cart_operations.py -k test_invalid_login
+
+# Windows One-Click Batch Runner
 run_tests.bat
-```
-*This executes the full suite in headless mode and automatically opens `reports/report.html` in your default browser.*
 
-### Option B: PowerShell Runner
-```powershell
-# Run full suite in headless Chrome
+# PowerShell Runner with Parameters
 .\run_tests.ps1 -Headless
-
-# Run with visible browser window (headed mode)
-.\run_tests.ps1
-
-# Run with Microsoft Edge
 .\run_tests.ps1 -Browser edge -Headless
-
-# Run only E2E tests
-.\run_tests.ps1 -Marker e2e -Headless
 ```
 
-### Option C: Pytest Direct Commands
-```bash
-# 1. Run all tests (headless)
-python -m pytest --headless
+## How each requirement is covered
 
-# 2. Run only the End-to-End Purchase Flow
-python -m pytest tests/test_e2e_purchase.py --headless
+| Requirement | Where |
+|---|---|
+| Launch Browser & Cross-Browser | `utilities/` & `tests/conftest.py` - Chrome, Firefox, Edge; headed & headless modes via CLI flags (`--browser`, `--headless`) and `config.ini` |
+| Login to Application | `pages/login_page.py` - user authentication, session validation, and auto-registration fallback |
+| Search Product | `pages/home_page.py`, `pages/search_results_page.py` - search bar locators, auto-suggest, and product card validation |
+| Add Product to Cart | `pages/search_results_page.py`, `pages/product_detail_page.py` - explicit waits, JavaScript fallback click, and success banner verification |
+| Update Quantity | `pages/cart_page.py` - quantity field input update, button submit, and cart recalculation |
+| Verify Cart Details | `pages/cart_page.py` - mathematical assertions on unit price, quantity, line total ($Price \times Qty$), and order total |
+| Screenshot on Failure & Steps | `utilities/screenshot_util.py`, `tests/conftest.py` - timestamped step captures in `screenshots/`, and `pytest_runtest_makereport` hook attaches failure screenshots to the HTML report |
+| Test Data (Excel & JSON) | `utilities/excel_util.py` (reads `test_data/test_data.xlsx`), `utilities/json_util.py` (reads `test_data/test_data.json`) - parameterized with `@pytest.mark.parametrize` |
+| Handle Popup / Alerts | `utilities/alert_handler.py` - native JavaScript dialogs (`alert`, `confirm`, `prompt`) and dismissible DOM / Bootstrap modal banners |
+| HTML Reporting | `pytest-html` via `pytest.ini` & `tests/conftest.py` -> `reports/report.html` (self-contained, metadata enriched, screenshots embedded) |
+| Logging | `utilities/custom_logger.py` -> console + `logs/automation.log` (passwords are never logged) |
 
-# 3. Run Data-Driven tests from Excel
-python -m pytest tests/test_data_driven_excel.py --headless
+## Design notes (useful for the viva)
 
-# 4. Run Data-Driven tests from JSON
-python -m pytest tests/test_data_driven_json.py --headless
+- **Explicit waits only** - no `time.sleep`, no implicit wait (mixing the two causes unpredictable timeouts). Elements are synchronized dynamically with `WebDriverWait` and `expected_conditions`.
+- **Fresh browser per test** - tests are independent and can run in any order with function-scoped fixtures in `conftest.py`.
+- **POM navigation methods return the next page object**, e.g. `HomePage.search_for()` returns `SearchResultsPage`.
+- **Resilient click fallback** - if an element is overlapped or animated (`ElementClickInterceptedException`), the framework automatically falls back to JavaScript execution (`execute_script`).
+- **Data-driven testing** - parameterized using `@pytest.mark.parametrize` reading from Excel (`openpyxl`) and JSON; each row gets its own result line, browser session, and screenshot.
+- **Failure detection & reporting** - `pytest_runtest_makereport` hook in `conftest.py` captures the browser screenshot dynamically on failure before teardown and embeds it into the self-contained HTML report.
 
-# 5. Run Cart Operations and Alert tests
-python -m pytest tests/test_cart_operations.py --headless
+## Notes and limitations
 
-# 6. Run with visible Chrome browser
-python -m pytest tests/test_e2e_purchase.py
-```
-
----
-
-## 6. Test Suite Details
-
-### 1. `test_e2e_purchase.py` (End-to-End Purchase Flow)
-- **Step 1**: Navigates to application home page and verifies title.
-- **Step 2**: Authenticates user via `LoginPage` (with automatic registration if needed).
-- **Step 3**: Searches for `MacBook` and verifies matching results.
-- **Step 4**: Clicks "Add to Cart" and captures screenshot. Verifies success notification banner.
-- **Step 5**: Navigates to Cart and verifies item presence.
-- **Step 6**: Updates item quantity from `1` to `2`.
-- **Step 7**: Verifies updated quantity = 2, unit price = \$602.00, line total = \$1,204.00 ($602 \times 2$).
-- **Step 8**: Dismisses alert popup and verifies total order price ($1,204.00).
-
-### 2. `test_data_driven_excel.py` (Data-Driven via Excel)
-- Reads from `test_data/test_data.xlsx` sheet `PurchaseScenarios`.
-- Dynamically executes 3 parameterized test cases:
-  - `TC_E2E_01`: MacBook (Quantity updated to 2, Total verified: \$1,204.00)
-  - `TC_E2E_02`: iPhone (Quantity updated to 3, Total verified: \$369.60)
-  - `TC_E2E_03`: Samsung Galaxy Tab 10.1 (Quantity updated to 2, Total verified: \$483.98)
-
-### 3. `test_data_driven_json.py` (Data-Driven via JSON)
-- Reads test data from `test_data/test_data.json`.
-- Dynamically validates multi-item searches, cart updates, and mathematical assertions.
-
-### 4. `test_cart_operations.py` (Cart Operations & Alerts)
-- **Negative Authentication Alert**: Verifies warning banner on invalid credentials.
-- **Quantity Update & Alert Dismissal**: Updates item quantity to 4 and tests `AlertHandler` dismissal.
-- **Cart Clear State**: Deletes items and verifies the empty cart notification message.
-
----
-
-## 7. Execution Reports & Evidence
-
-### HTML Report (`reports/report.html`)
-The generated report contains:
-- **Executive Summary**: Pass/Fail metrics, duration, timestamp.
-- **Metadata**: Application URL, Browser, Python version, OS platform, Tester details.
-- **Live Logs**: Captured log messages for every individual test step.
-- **Embedded Screenshots**: Attached screenshots on failures and step verifications.
-
-### Screenshots (`screenshots/`)
-Timestamped PNG files saved automatically during execution:
-- `01_home_page_launched_*.png`
-- `02_user_logged_in_*.png`
-- `03_search_results_*.png`
-- `04_product_added_to_cart_*.png`
-- `05_cart_initial_view_*.png`
-- `06_quantity_updated_*.png`
-- `07_cart_verified_alert_dismissed_*.png`
-- `excel_TC_*_*.png`
-- `json_TC_*_*.png`
-
-### Logs (`logs/automation.log`)
-Detailed timestamped logs capturing element locators, clicks, input entries, alerts handled, and mathematical validations:
-```
-2026-09-27 11:46:58 [INFO] Step 2 passed: User authenticated successfully.
-2026-09-27 11:46:58 [INFO] Searching for product: 'MacBook'
-2026-09-27 11:46:59 [INFO] Clicked 'Add to Cart' button.
-2026-09-27 11:46:59 [INFO] Add to cart alert: 'Success: You have added MacBook to your shopping cart!'
-2026-09-27 11:47:00 [INFO] Updating quantity to: 2 for product: 'MacBook'
-2026-09-27 11:47:00 [INFO] Verification -> Quantity: 2, Unit Price: $602.0, Line Total: $1204.0
-2026-09-27 11:47:01 [INFO] Final Cart Total: $1204.0
-2026-09-27 11:47:01 [INFO] ========== E2E Purchase Flow Test COMPLETED SUCCESSFULLY ==========
-```
-
----
-
-## 8. Summary of Achievements
-
-- 🎯 **10/10 Requirements Satisfied**: Complete coverage of all business and technical specifications.
-- 🚀 **100% Test Pass Rate**: 10 tests passed across E2E, Excel Data-Driven, JSON Data-Driven, and Regression suites.
-- 🛡️ **Zero Flakiness**: Dynamic explicit waits and auto-recovery mechanisms ensure reliable execution in both CI and local desktop environments.
+- The demo is a public shared site (`https://tutorialsninja.com/demo/`); if it is slow or resets its database, test user credentials in `config/config.ini` can be updated or the auto-registration fallback in `login_page.py` will self-heal.
+- OpenCart temporarily locks an account after several failed logins with the same e-mail. The negative login tests therefore verify error alert banners or rate-limiting warnings cleanly.
+- Locators were written from the standard OpenCart 3 markup that TutorialsNinja uses. If the site changes its markup, only the locator constants in `pages/` need updating.
