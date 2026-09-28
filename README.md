@@ -15,7 +15,7 @@ Automates Login, Product Search, Cart Operations, and End-to-End Checkout on the
 ```
 selenium_capstone/
 ├── All Certificates/                              # Course & automation certifications (PDF)
-├── Capstone project Report/                       # Capstone project report documentation (.docx)
+├── Capstone project Report/                       # Capstone project report documentation (PDF)
 ├── Selnium Assignments Reports (1,2,3,4 Modules)/ # Module 1-4 assignment submission reports (PDF)
 ├── config/
 │   ├── config.ini              # URL, browser, waits, credentials, folder paths
